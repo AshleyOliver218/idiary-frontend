@@ -1,13 +1,14 @@
 /* CSS Custom Properties */
 :root {
   --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
-  --text-light: #968c84;
-  --text-dark: #615954;
+  --blue:  #B8CCF8;
+  --lav: #A89FE9;
+  --orchid: #E9A9E7;
+  --lg-pink: #F7B7D9;
+  --lred: #FBC8D4;
+  --dred: #FB8CAA;
+  --champagne: #F7E8D2;
+  --dpurple: #9550A3;
 }
 
 *, *:before, *:after {
@@ -21,8 +22,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-3);
-  padding: 2vmin;
+  background-color: var(--champagne);
   height: 100vh;
 }
 
@@ -64,7 +64,9 @@ code {
 .scroll-y {
   overflow-y: scroll;
 }
-
+App{
+ margin:0;
+}
 .section-heading {
   display: flex;
   justify-content: space-around;
@@ -77,7 +79,25 @@ code {
   text-align: center;
   font-size: 2vmin;
 }
-
+.HomePage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dred);
+  border-radius: 2vmin;
+}
+.HomePage-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--lred);
+}
+aside {
+  background-color: var(--blue)
+}
 .form-container {
   padding: 3vmin;
   background-color: var(--tan-1);
@@ -120,13 +140,13 @@ input:focus {
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
-  color: var(--white);
-  background-color: var(--orange);
+  color: var(--dpurple);
+  background-color: var(--blue);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
+  border: .1vmin solid var(--lg-pink);
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
@@ -153,5 +173,12 @@ button[type="submit"] {
 }
 
 nav {
-  background-color:  #A89FE9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3vmin 2vmin;
+}
+ul {
+  list-style-type: none;
 }
