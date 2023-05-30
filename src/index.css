@@ -2,6 +2,8 @@
 :root {
   --white: #FFFFFF;
   --blue:  #B8CCF8;
+  --l-lav: #F1D4FA;
+  --m-lav: #DDC4F7;
   --lav: #A89FE9;
   --orchid: #E9A9E7;
   --lg-pink: #F7B7D9;
@@ -22,7 +24,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--champagne);
+  background-color: var(--l-lav);
   height: 100vh;
 }
 
@@ -85,7 +87,7 @@ App{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--dred);
+  background-color: var(--m-lav);
   border-radius: 2vmin;
 }
 .HomePage-display {
@@ -93,15 +95,15 @@ App{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--lred);
+  background-color: var(--lav);
 }
 aside {
-  background-color: var(--blue)
+  background-color: var(--dpurple)
 }
 .form-container {
-  padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  padding: 3vmin, 6vmin;
+  background-color: var(--m-lav);
+  border: .1vmin solid var(--lg-pink);
   border-radius: 1vmin;
 }
 
@@ -111,10 +113,10 @@ p.error-message {
 }
 
 form {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
+  flex-direction: column;
   gap: 1.25vmin;
-  color: var(--text-light);
+  color: var(--dpurple);
 }
 
 label {
@@ -124,19 +126,39 @@ label {
 }
 
 input {
-  padding: 1vmin;
-  font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
+  padding: 1.5vmin;
+  font-size: 4vmin;
+  width: 150vmin;
+  border: .1vmin solid var(--blue);
   border-radius: .5vmin;
-  color: var(--text-dark);
+  color: var(--dpurple);
   background-image: none !important; /* prevent lastpass */
   outline: none;
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: var(--orchid);
 }
+textArea {
+  padding: 1.5vmin;
+  font-size: 3vmin;
+  border: .1vmin solid var(--blue);
+  border-radius: .5vmin;
+  color: var(--dpurple);
+  outline: none;
+}
+textArea:focus {
+  border-color: var(--orchid);
+}
+/* input:checkbox {
+  border: .1vmin solid var(--blue);
+  border-radius: .5vmin;
+  color: var(--dpurple);
+  outline: none;
+}
+checkbox:focus {
 
+} */
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;

@@ -3,8 +3,9 @@ import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import HomePage from './pages/HomePage';
 import Journals from './components/Journals'
-// import Journal from './components/Journal'
-
+import SingleJournal from './components/SingleJournal'
+import NewJournal from './components/NewJournal';
+import UpdateJournal from './components/UpdateJournal'
 
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={ <HomePage/> } />
-        {/* <Route path='/journals'/> */}
+        <Route path='/new' element={<NewJournal/>}/>
+        <Route path='/:id' element={<SingleJournal/>}/>
+        <Route path='/:id/edit' element={<UpdateJournal/>}/>
       </Routes>
     </Router>
     </div>

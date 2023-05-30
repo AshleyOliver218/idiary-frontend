@@ -1,16 +1,15 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate} from 'react-router-dom'
 import Journals from '../components/Journals'
 
-
 export default function HomePage() {
-    
+const navigate = useNavigate()
   return (
     <div className='HomePage-display'>
       <div className='HomePage'>
         <h1>HomePage</h1>
         <p>Welcome to a place where you can electronically express all of you thoughts, hopes, dreams, and goals</p>
-        <button href='/journals/:id' >new journal entry</button>
+        <button onClick={() => {navigate('/new')}}>New Journal Entry</button>
       </div> 
       <aside>
         <Journals/> 
