@@ -1,5 +1,6 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001/journals'
+// const baseUrl = 'http://localhost:3001/journals' (deployment server)
+const baseUrl = 'https://idiary-mongoose.onrender.com/'
 
 
 //get all journals (Index)

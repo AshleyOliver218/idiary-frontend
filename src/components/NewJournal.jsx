@@ -1,6 +1,7 @@
 import React from 'react'
 import { createJournal } from '../services/journals-api'
 import { useNavigate, useParams } from 'react-router-dom'
+import Journals from './Journals'
 
 export default function NewJournal() {
   const navigate = useNavigate()
@@ -8,7 +9,17 @@ export default function NewJournal() {
   function createAJournal(evt){
     evt.preventDefault()
     const evtVal = evt.target
-    const aJournal = {title: evt.target.title.value, date: evt.target.date.value, entry: evt.target.entry.value, goal1: evt.target.goal1.value, goal2: evt.target.goal2.value, goal3: evt.target.goal3.value, goal1IsCompleted: false, goal2IsCompleted: false, goal3IsCompleted: false}
+    const aJournal = {
+      title: evt.target.title.value, 
+      date: evt.target.date.value,
+      mood: evt.target.mood.value, 
+      entry: evt.target.entry.value, 
+      goal1: evt.target.goal1.value, 
+      goal2: evt.target.goal2.value, 
+      goal3: evt.target.goal3.value, 
+      goal1IsCompleted: false, 
+      goal2IsCompleted: false, 
+      goal3IsCompleted: false}
     createJournal(aJournal).then(() => navigate('/'))
   }
   return (
@@ -17,6 +28,7 @@ export default function NewJournal() {
       <form onSubmit={createAJournal}>
         <input type='text' name='title' placeholder='Title' />
         <input type='text' name='date' placeholder='Date'/>
+        <input type='text' name='mood' placeholder='Mood'/>
         <textarea type='text' name='entry' placeholder='Entry' size='40'/>
         <input type='text' name='goal1' placeholder='Goal 1'/>
         <label>Is Goal 1 Complete?</label>
@@ -31,6 +43,7 @@ export default function NewJournal() {
       </form>
       <button onClick={() => {navigate(`/${id}/edit`)}}>Edit</button>
       <button onClick={() => {navigate('/')}}>Home</button>
+      <Journals/>
     </div>
   )
 }

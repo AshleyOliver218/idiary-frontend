@@ -11,10 +11,12 @@ export default function Journals() {
   console.log(journals)
     
   return (
+  <aside>
+    <h4>Previous iDiary Entries</h4>
     <ul>
       {journals.map((journal, i) => {
         return(
-          <li>
+          <li className='section-heading'>
             <Link to={`/${journal._id}`}>{journal.title}</Link>
             <p>{journal.date}</p>
           </li>
@@ -22,5 +24,6 @@ export default function Journals() {
 
       })}
     </ul>
+  </aside>
   )
 }

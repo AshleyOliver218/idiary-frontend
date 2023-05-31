@@ -2,10 +2,9 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import HomePage from './pages/HomePage';
-import Journals from './components/Journals'
-import SingleJournal from './components/SingleJournal'
 import NewJournal from './components/NewJournal';
 import UpdateJournal from './components/UpdateJournal'
+import ShowPage from './pages/ShowPage';
 
 
 function App() {
@@ -13,12 +12,13 @@ function App() {
   
   return (
     <div className="App">
-      <NavBar/>
+      {/* <NavBar/> */}
+      {/* <img src='https://i.ibb.co/CPXd37m/diary-logo.png' width='100vmin' height='100vmin'/> */}
     <Router>
       <Routes>
         <Route path='/' element={ <HomePage/> } />
         <Route path='/new' element={<NewJournal/>}/>
-        <Route path='/:id' element={<SingleJournal/>}/>
+        <Route path='/:id' element={<ShowPage/>}/>
         <Route path='/:id/edit' element={<UpdateJournal/>}/>
       </Routes>
     </Router>

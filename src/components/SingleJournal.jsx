@@ -16,7 +16,7 @@ export default function SingleJournal() {
   return (
     <div>
         <h1>iDiary Entry</h1>
-        <p><h3>Title:</h3> {journal.title} <h3>Date:</h3> {journal.date}</p>
+        <p className='section-heading'><h3>Title:</h3> {journal.title} <h3>Date:</h3> {journal.date}</p>
         <p>{journal.entry}</p>
         <aside>
           {journal.goal1} Done: {journal.goal1IsCompleted ? <p>'Yes'</p> : <p>'No'</p>}
