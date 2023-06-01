@@ -23,7 +23,8 @@ export default function NewJournal() {
     createJournal(aJournal).then(() => navigate('/'))
   }
   return (
-    <div>
+    <div className='diary-entry'>
+      <img src='https://i.ibb.co/CPXd37m/diary-logo.png' width='200vmin' height='200vmin' />
       <h1>New Diary Entry</h1>
       <form onSubmit={createAJournal}>
         <input type='text' name='title' placeholder='Title' />
@@ -41,9 +42,8 @@ export default function NewJournal() {
         <input type='checkbox' name='goal3IsCompleted'/>
         <button type='submit'>Save Diary Entry</button>
       </form>
-      <button onClick={() => {navigate(`/${id}/edit`)}}>Edit</button>
+      
       <button onClick={() => {navigate('/')}}>Home</button>
-      <Journals/>
     </div>
   )
 }

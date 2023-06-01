@@ -1,8 +1,9 @@
 import { getJournals } from '../services/journals-api'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 export default function Journals() {
+  const navigate = useNavigate()
   const [journals, setJournals] = useState([])
   useEffect(() => {
     getJournals()

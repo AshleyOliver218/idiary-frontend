@@ -4,7 +4,7 @@ import SingleJournal from '../components/SingleJournal'
 
 export default function ShowPage() {
   return (
-    <div>
+    <div className='ShowPage'>
         <SingleJournal/>
         <Journals/>
     </div>

@@ -14,20 +14,20 @@ useEffect(() => {
 .then(res => setJournalData(res.data))
 }, [])
 
-    function deleteAJournal() {
-        deleteJournal(id) // delete function goes here
+   async function deleteAJournal() {
+        await deleteJournal(id) // delete function goes here
          navigate('/') // navigate back to the main screen
      }
     
-    function editAJournal(evt) {
+    async function editAJournal(evt) {
         evt.preventDefault()
         const updatedJournal = { title: evt.target.title.value, date: evt.target.date.value, entry: evt.target.entry.value, goal1: evt.target.goal1.value, goal2: evt.target.goal2.value, goal3: evt.target.goal3.value, goal1IsCompleted: evt.target.goal1IsCompleted.checked, goal2IsCompleted: evt.target.goal2IsCompleted.checked, goal3IsCompleted: evt.target.goal3IsCompleted.checked }
         console.log(updatedJournal)
-        editJournal(updatedJournal, id)
+        await editJournal(updatedJournal, id)
         navigate(`/${id}`)
     }
   return (
-    <div>
+    <div className='update-display'>
         <h1>Update Diary Entry</h1>
       <form onSubmit={editAJournal}>
         <input type='text' name='title' defaultValue={journalData.title}/>

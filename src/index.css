@@ -27,10 +27,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--dpurple);
   height: 100vh;
+  margin:4vmin;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+   align-items: center;
+  justify-content: center; 
 }
 
 code {
@@ -38,9 +39,9 @@ code {
     monospace;
 }
 
-#root {
+ #root {
   height: 100%;
-}
+} 
 
 /* .align-ctr {
   text-align: center;
@@ -72,17 +73,19 @@ code {
   overflow-y: scroll;
 } */
 
- .section-heading {
+  .section-heading {
   display: flex;
+  justify-content: center;
   background-color: var(--champagne);
   color: var(--dpurple);
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
   padding: .6vmin;
   margin:0;
+  width:50vmin;
   text-align: center;
   font-size: 2.5vmin;
-}
+} 
 .HomePage {
   height: 100%;
   display: flex;
@@ -106,7 +109,7 @@ code {
   align-items: flex-start;
   background-color: var(--orchid);
   border-radius: 2vmin;
-  margin:10vmin;
+  
   padding:2vmin;
   height:90vmin;
 }
@@ -115,12 +118,17 @@ code {
   border-radius: 20vmin;
   margin-right: 30vmin;
 }
-.img-title{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+ .img-title{
+   display: flex;
+   flex-direction: row;
+  justify-content: space-around;
 
+} 
+.diary-entry{
+  background-color: var(--lred);
+  border-radius: 1vmin;
+  padding: 5vmin;
+}
  .home-journals {
   display: flex;
   flex-direction: row;
@@ -135,13 +143,14 @@ h1{
   font-family: 'Nahista', sans-serif;
   font-size: 8vmin;
   text-shadow:.5vmin .5vmin var(--dpurple);
-  margin-left: 15vmin;
+  /* margin-left: 17vmin; */
 }
 h4{
   color:var(--lav);
   font-size: 2.5vmin;
   text-shadow:.2vmin .2vmin var(--dpurple);
-
+  margin-bottom: 1vmin;
+  margin-top:1vmin;
 }
 
 aside {
@@ -151,11 +160,11 @@ aside {
   align-items: center;
   background-color: var(--orchid);
   border-radius: 1vmin;
-  margin: 2vmin;
+  margin: .5vmin;
   width:80vmin;
   height:50vmin;
 }
-/*
+
 .form-container {
   padding: 3vmin, 6vmin;
   background-color: var(--m-lav);
@@ -174,43 +183,45 @@ label {
   font-size: 2vmin;
   display: flex;
   align-items: center;
-} */
+} 
 
-/* input {
+input {
   padding: 1.5vmin;
   font-size: 4vmin;
   width: 150vmin;
-  border: .1vmin solid var(--blue);
-  border-radius: .5vmin;
+  border: .5vmin solid var(--blue);
+  border-radius: 1vmin;
   color: var(--dpurple);
-  background-image: none !important; 
-  outline: none;
-}
+  background-color:var(--l-lav) 
 
+}
+.ShowPage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: var(--l-lav);
+  border-radius: 1vmin;
+  padding:5vmin;
+}
 input:focus {
-  border-color: var(--orchid);
+  color: var(--dpurple);
+  border: .5vmin solid var(--orchid);
+  outline: none;
 }
 textArea {
   padding: 1.5vmin;
-  font-size: 3vmin;
-  border: .1vmin solid var(--blue);
-  border-radius: .5vmin;
+  font-size: 4vmin;
+  border: .5vmin solid var(--blue);
+  border-radius: 1vmin;
   color: var(--dpurple);
   outline: none;
+  width: 150vmin;
+  background-color:var(--l-lav) 
 }
 textArea:focus {
   border-color: var(--orchid);
-}  */
-
-/* input:checkbox {
-  border: .1vmin solid var(--blue);
-  border-radius: .5vmin;
-  color: var(--dpurple);
-  outline: none;
-}
-checkbox:focus {
-
-} */
+} 
 
 button, a.button {
   margin: 1vmin;
@@ -260,7 +271,9 @@ nav {
   align-items: center;
   height: 40vmin;
   overflow-y: scroll;
-  padding:0;
+  width:60vmin;
+  padding-top:1vmin;
+  padding-bottom: 1vmin;
   margin:0;
 }
 
@@ -284,6 +297,36 @@ a:visited{
 }
 a:hover{
 background-color: var(--dred);
-transform:scale(1.2);
+transform:scale(1.05);
 transition: 100ms;
 } 
+.SingleJournal-display{
+  width:90%;
+  height: 100%;
+  display: flex;
+  background-color: var(--l-lav);
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1vmin;
+  width:150vmin;
+  padding:5vmin;
+}
+.entry{
+  background-color: var(--lred);
+  border-radius: 1vmin;
+  margin: 1vmin;
+  color: var(--dpurple);
+  width:90vmin;
+}
+.update-display{
+  background-color: var(--m-lav);
+  border-radius: 1vmin;
+  padding: 5vmin;
+}
+.goals{
+  color: var(--l-lav);
+  text-shadow:.2vmin .2vmin var(--dpurple);
+  margin:0;
+}
