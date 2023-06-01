@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# iDiary
+ I created this project to showcase my skills creating a backend API using MongoDB, and using React to create the front-end visuals. I designed it with a soft feminine color pallete. I wanted to to look very early 2000's Lizzie McGuire-esque.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Screen Shots 
 
-## Available Scripts
+![Wireframes](src/images/image0.jpeg)
+![Wireframes](src/images/image2.jpeg)
 
-In the project directory, you can run:
+### Basic page layout ideas
+![Logo](src/images/Logo.png)
 
-### `npm start`
+### My custom logo made with a graphic created on Canva
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Home Page](src/images/HomePage.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### This page welcomes the user and gives the option create a new diary entry or view a previous one.
 
-### `npm test`
+![NewJournal](src/images/NewJournalTop.png)
+![NewJournal](src/images/NewJournalBottom.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### This page allows you to create a new Journal entry and log your mood and give yourself 3 goals for the day which you can late mark as complete in the edit feature
 
-### `npm run build`
+![Journals Component](src/images/JournalsComponent.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### This lists the titles and dates of the entries as a link to view them. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Single Journal](src/images/SingleJournalTop.png)
+![Single Journal](src/images/SingleJournalBottom.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Once you click on a title displayed in the Journals components, it shows the diary entry in its entirety and has a link to create an entry edit the entry on the page or go back to the home page
 
-### `npm run eject`
+![Update Journal page with delete function](src/images/UpdateJournalTop.png)
+![Update Journal page with delete function](src/images/UpdateJournalBottom.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### This is where you can change anything about your journal entry or add to it as the day goes on. You can also mark if the goals are complete or you can delete the entry with the delete button.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Technology Used
+- Built with React
+- logo created with Canva
+- [my idiary api repo](https://github.com/AshleyOliver218/idiary-backend.git)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Code Example
+export async function getJournal(id) {
+  const getUrl = `${baseUrl}/${id}`
+  const response = await axios.get(getUrl)
+  return response
+}
+  
+This simple function is one of the most used functions in the project. You have to getJournal() before you can display it, edit it, or delete it.
 
-## Learn More
+# API Used
+For this project I used [my idiary api repo](https://github.com/AshleyOliver218/idiary-backend.git) that I created using Mongoose, Node, and utilizing MongoDB to get all of the different information that can be displayed on the front end. Node manages the runtime environment, Monoose connects and interacts with the database, which is hosted on MongoDB.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# How to use?
+Simply click [here](https://idiary-react.onrender.com/) to utilize the application.
+If you wanted to use the project as a starting point for your own project you would have to create a react application in your terminal by typing: npx create-react-app *file name*
+then when that is finished: npm install axios
+and then git clone the files from my repository. To run a live server to see the application visually: npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You would also need to click [here](https://github.com/AshleyOliver218/idiary-backend.git) and follow the instructions in the repo's README to set up your backend
 
-### Code Splitting
+# Up-Coming Features
+- Responsive design optimized for mobile use
+- Implement user authentication and authorization
+- Allow a parent limited authorization to see certain portion of the diary entries
+- Parent would assign the goals to child and see if they are completed by the end of the day
+- Diary entries can be searched by title
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Credits
+Kasper and Dylan for all your help
 
-### Analyzing the Bundle Size
+ [Canva](https://www.canva.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

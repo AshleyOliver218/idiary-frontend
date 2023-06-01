@@ -40,6 +40,7 @@ export default function SingleJournal() {
                <p className='goals'>{journal.goal3}<br></br>  
                {journal.goal3IsCompleted ? <p><b>Complete:</b>Yes</p> : <p><b>Complete:</b>No</p>}</p>
                 <button onClick={() => { navigate(`/${id}/edit`) }}>Edit</button>
+                <button onClick={() => { navigate('/new') }}>New Journal Entry</button>
                 <button onClick={() => { navigate('/') }}>Home</button>
             </aside>
 
